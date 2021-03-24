@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Đăng ký tài khoản</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="static/register.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                HỆ THỐNG HỖ TRỢ HỌC TẬP SINH VIÊN ĐIỆN TỬ - VIỄN THÔNG
+            </div>
+        </header>
+        <main>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                {%for x in fail%}
+                <li>{{ x }}</li>
+                {% endfor %}
+            </div>
+            <div class="container">
+            <h1>ĐĂNG KÝ TÀI KHOẢN SINH VIÊN</h1>
+            <div class="register-form">
+                <form action="/registercheck" method="post">
+                    <label for="name">Họ và tên:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="mssv">Mã số sinh viên:</label>
+                    <input type="number" id="mssv" name="mssv"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email"><br><br>
+                    <label for="username">Tên đăng nhập:</label>
+                    <input type="text" id="username" name="username"><br><br>
+                    <label for="password">Mật khẩu:</label>
+                    <input type="password" id="password" name="password"><br><br>
+                    <label for="passconf">Xác nhận mật khẩu:</label>
+                    <input type="password" id="passconf" name="passconf"><br><br>
+                    <button type="submit" value="submit"> Đăng ký tài khoản </button>
+                </form>
+            </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+               Thesis Proposal 192
+            </div>
+        </footer>
+    </body>
+</html>

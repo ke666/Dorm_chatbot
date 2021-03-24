@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title style="font-weight: bolder;">HỖ TRỢ SINH VIÊN</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/logo.png"/>
+    <script>
+      function startTime() {
+        var today = new Date();
+        var hour = checkTime(today.getHours());
+        var min = checkTime(today.getMinutes());
+        var sec = checkTime(today.getSeconds());
+        var day = checkTime(today.getDate());
+        var mon = checkTime(today.getMonth()+1);
+        var year = checkTime(today.getFullYear());
+        document.getElementById('txt').innerHTML =
+        day + "/" + mon + "/" + year + " " + hour + ":" + min + ":" + sec;
+        var t = setTimeout(startTime, 500);
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i}; 
+          return i;
+        }
+      }
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <style>
+    body {
+      font-family: monospace;
+      margin:auto;
+      font-size: 1.1vw;
+      padding-left: 0.5vw;
+      padding-right: 0.5vw;
+    }
+
+    #header{
+        margin: auto;
+        display: block;
+        padding: 2vw 2vw;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url('/static/headimage03.png');
+        background-size: 100% 120%;
+    }
+
+    
+
+    #head-title {
+      color: rgb(238, 0, 119);
+      font-weight: bolder;
+      font-size: 3vw;
+      text-align: center;
+    }
+    
+    #head-button{
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      margin-top: 1vw;
+    }
+
+    #infouser {
+      width: 100%;
+      margin-top: 2vw;
+      font-size: 1.5vw;
+    }
+
+    .record_but{
+        padding: 18px 18px;
+        border-radius: 50px;
+        background-color: rgb(255, 40, 83);
+        font-weight: bolder;
+    }
+
+    #textInput {
+        font-family: monospace;
+        font-size: 1vw;
+        height: 3vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        padding: 1vw;
+        width: 80%;
+        border-radius: 1vw;
+        background:rgb(219, 219, 219);
+    }
+
+    .userText {
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 1vw;
+        line-height: 2vw;
+        text-align: right !important;
+        text-justify:auto !important;
+        width: 100%;
+        margin-top:1vw;
+        word-break: break-all;
+        background-color: #1000a5;
+        padding: .5vw .5vw .5vw .5vw;
+        border-radius: 1vw;
+    }
+
+    .botText {
+        color: rgb(255, 255, 255);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1vw;
+        text-align: left;
+        line-height: 2vw;
+        font-weight: bold;
+        background-color: rgb(255, 0, 0);
+        width: 100%;
+        border-radius: 5px;
+        padding: .5vw .5vw .5vw .5vw;
+        margin-top:1vw;
+    }
+    
+    .time{
+      display: inline-block;
+      font-weight: bolder;
+      color:rgb(255, 253, 113);
+    }
+    
+    #logout{
+      margin-left: 20rem ;
+      background-color: crimson;
+      font-weight: bolder;
+      color: rgb(255, 223, 255);
+    }
+    
+    #Bar{
+      width: 60%;
+    }
+    #myBar {
+        height: 30px;
+        border-radius: 15px;
+        background-color: #bd0000;
+        text-align: center; /* To center it horizontally (if you want) */
+        line-height: 30px; /* To center it vertically */
+        color: rgb(255, 253, 113);
+        font-size: 15pt;
+        font-weight: bolder;
+        margin-bottom: 0px;
+        margin-top: 2px;
+    }
+    .image{
+        margin-top: 0cm;
+        margin-right: 5px;
+        vertical-align: middle;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .add0 {
+      margin-right: 3vw;
+      font-weight: bolder;
+    }
+
+    .add1{
+      margin-top: 1vw;
+    }
+
+    .question {
+      margin-bottom: 1vw;
+      font-weight: bolder;
+      font-size: 1vw;
+    }
+
+    .title{
+      text-align: left;
+      width: 100%;
+      color: #25008a;
+      font-weight: bolder;
+      font-size: 3vw ;
+      padding: 1vw 1vw;
+    }
+
+    .title:after {
+      border-top: 0.25vw solid #611212;
+      display: block;
+      margin-top: 0.25vw;
+      width: 20%;
+      content: "";
+    }
+
+    #footer {
+      margin-top: 3vw;
+      display: block;
+      width: 100%;
+      padding: 2vw 2vw;
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: url('/static/headimage01.png');
+      background-size: 100% 100%;
+    }
+  </style>
+
+  <style>
+
+    /* Nút Để Mở Chatbox */
+    .nut-mo-chatbox {
+      background-color: rgb(0, 2, 141);
+      color: white;
+      padding: 1vw 1vw;
+      border: none;
+      cursor: pointer;
+      font-weight: bolder;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 2vw;
+      right: 2vw;
+      width: 10%;
+      z-index: 99;
+    }
+
+    /* Ẩn chatbox mặc định */
+    .Chat {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      background-color: rgb(29, 0, 134);
+      z-index: 99;
+      border-top-left-radius: 1vw;
+      border-top-right-radius: 1vw;
+    }
+
+    /* Thêm style cho form */
+    .form-container {
+      max-width: 25vw;
+      padding: 1vw;
+    }
+
+    #chatbox{
+      padding: 0.5vw 0.5vw;
+      background: rgb(203, 240, 255);
+      overflow-y:scroll;
+      scroll-behavior: smooth;
+      height: 20vw;
+    }
+
+    .school1 {
+        float: right;
+        margin: 0 0 3vw 3vw;
+    }
+  </style>
+
+  <style>
+    .list-group-item {
+      padding: 1vw 1vw;
+    }
+
+    .btn {
+      padding: 1vw 1vw;
+      font-size: 1vw;
+      border-radius: .5vw;
+      border-width: .25vw;
+    }
+
+  </style>
+
+
+  <body onload="startTime()">
+    <div id="header">
+      <span class="time" id="txt"></span> 
+      <a class="btn btn-danger" href="/" style="float:right; padding: 0.5vw 0.5vw; display:inline;">LOGOUT</a>
+      <div id="head-title"> HỆ THỐNG HỖ TRỢ SINH VIÊN </div>
+      <div id="head-button">
+        <button type="button" class="btn btn-warning add0" id="gt">TRANG CHỦ</button>
+        <button type="button" class="btn btn-warning add0" id = "tb">THÔNG BÁO</button>
+        <button type="button" class="btn btn-warning add0" id = "dt">ĐÀO TẠO</button>
+        <button type="button" class="btn btn-warning add0" id = "vb">VĂN BẢN</button>
+        <button type="button" class="btn btn-warning add0" id = "lh">LIÊN HỆ</button>
+      </div>
+      <div id="infouser">
+        <span style="color: aquamarine;">
+          Xin chào 
+          <span style="text-align: left; color:#ff4b4b; font-weight: bolder; ">
+              {{ name }} ({{mssv}})
+          </span> 
+          đã đăng nhập vào hệ thống.
+        </span>
+      </div>
+    </div>
+
+    <script>
+      $("div#head-button button").click(function(e){
+          showelement(this.id);
+      });
+
+      function showelement(name){
+        console.log(name);
+        var blockclass = ['gt','tb','dt','vb','lh']
+        for (i=0;i<blockclass.length;i++){
+          if (name != blockclass[i]){
+            $('div.' + blockclass[i]).attr('hidden', true);
+          } else {
+            $('div.'+blockclass[i]).removeAttr('hidden');
+          }
+        }
+      }
+    </script>
+    
+ 
+    <button type="button" class="btn btn-primary nut-mo-chatbox" onclick="moForm()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2vw" height="2vw" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+        <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"></path>
+      </svg>
+      CHATBOT
+    </button>
+    
+    
+    
+    <div class="Chat" id="myForm">
+      <button type="button" class="btn btn-danger add0" onclick="dongForm()">X</button>
+      <div class="form-container">
+        <div id="chatbox">
+          <p class="botText">
+            <span>
+              <img class="image" src="/static/logo.png" alt="HCMUT" style="width:10%;height:10%;"/>
+              Chào bạn {{ name }}, mình có thể giúp gì được cho bạn ? 
+            </span>
+          </p>
+        </div>
+          <div id="tool_chat">
+              <input id="textInput" type="text" name="msg" onkeydown="search(this)"/>
+              <button type="button" class="btn btn-info" onclick="getrecord()" id="record_but">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5vw" height="1.5vw" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"></path>
+                  <path fill-rule="evenodd" d="M10 8V3a2 2 0 1 0-4 0v5a2 2 0 1 0 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"></path>
+                </svg>
+              </button>
+          </div>      
+        </div>
+    </div>
+
+    <script>
+      /*Hàm Mở Form*/
+      function moForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      /*Hàm Đóng Form*/
+      function dongForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
+
+    <script>
+        function getrecord(){
+          var course_data = '{{course}}';
+          var mssv = '{{mssv}}';
+          document.getElementById("record_but").disabled = true;
+          var record_bar = '<div class="progress bar"><div class="progress-bar bg-warning" id = "listen" role="progressbar" style="width: 0%"></div></div>';
+          $("#tool_chat").before(record_bar);
+          $("#listen").animate({width:"100%"},10000);
+          
+          $.get("/voicebot",{course:course_data, mssv:mssv}).done(function(id){
+            var userHtml = '<audio class="userText"  align="right" controls="controls" type="audio/wav" src=/static/question.wav?u='+id+'></audio>';
+            $("#chatbox").append(userHtml);
+            document
+              .getElementById("textInput")
+              .scrollIntoView({ block: "start", behavior: "smooth" });
+
+            var botHtml = '<img class="image" src="/static/logo.png" alt="HCMUT" style="width:10%; height:10%;"></img>';
+            $("#chatbox").append(botHtml);
+            var botHtml = '<audio class="botText" align="left" controls="controls" autoplay="autoplay" src=/static/answer.mp3?u='+id+'style="width=70%;"></audio>';
+            $("#chatbox").append(botHtml);
+            $("#chatbox").scrollTop($("#chatbox").height());
+            document
+              .getElementById("textInput")
+              .scrollIntoView({block: "start",behavior:"smooth"});
+            $(".bar").remove();
+            document.getElementById("record_but").disabled = false;
+            $("#chatbox").scrollTop($("#chatbox").height());
+          });
+        }
+
+        
+
+        function getBotResponse(){
+          var course_data = '{{course}}';
+          var mssv = '{{mssv}}';
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText" align="left"><span>'+rawText+'</span></p>';
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document.getElementById("textInput").scrollIntoView({block: "start", behavior: "smooth" });
+
+          $.get("/getbot", {msg:rawText, course:course_data, mssv:mssv}).done(function(data){
+            var answer = JSON.parse(data);
+            var botHtml = '<p class="botText" align="right"><img class="image" src="/static/logo.png" alt="HCMUT" style="width:10%; height:10%;"><span>' + answer.answer + '</span></p>';
+            $("#chatbox").append(botHtml);
+            document.getElementById("textInput").scrollIntoView({ block: "start", behavior: "smooth" });
+            $("#chatbox").scrollTop($("#chatbox").height());
+          });
+          
+        }
+
+        function search(ele){
+            if(event.key === 'Enter'){
+                getBotResponse();  
+                $("#chatbox").scrollTop($("#chatbox").height());    
+            }
+        }
+        
+      </script>
+
+
+
+
+
+      <div id="introduction" class = "gt">
+        <div class="title">GIỚI THIỆU</div>
+        <p style="width: 90%; padding-left:2vw; font-size: 1.5vw; text-indent: 2vw;">
+        <img src="/static/school1.jpg" width="40%" height="40%" class="school1">
+          Được ra đời vào năm 2021, với mục tiêu cung cấp những thông tin bổ ích
+          cho các bạn sinh viên <b>ngành Điện tử - Viễn thông</b> nói riêng và sinh viên 
+          trường Đại Học Bách Khoa nói riêng, <b>HỆ THỐNG HỖ TRỢ SINH VIÊN</b> hi
+          vọng trở thành một người bạn đồng hành không thể thiếu đối với sinh viên
+          hiện nay. Những tính năng quan trọng mà hệ thống cung cấp :
+          <ul style="padding-left:4vw; font-size: 1.5vw;">
+            <li>Hệ thống chatbot hỗ trợ tư vấn sinh viên</li>
+            <li>Các thông báo quan trọng của giảng viên, bộ môn và của trường</li>
+            <li>Các thông tin về chương trình đào tạo, môn học và đề cương chi tiết</li>
+          </ul>
+        </p>
+        <p style="width: 90%; padding-left:2vw; font-size: 1.5vw; text-indent: 2vw;">
+          Vì lý do hệ thống đang trong quá trình xây dựng và hoàn thiện nên không thể tránh
+          khỏi những sai sót nhỏ. Mọi ý kiến thắc mắc, các bạn có thể liên hệ với chúng tôi
+          <a href="#">tại đây</a>.
+        </p>
+        <p style="width: 90%; padding-left:2vw; font-size: 1.5vw; text-indent: 2vw;">
+          Xin chân thành cảm ơn các bạn đã tin tưởng và sử dụng hệ thống !
+        </p>
+      </div>
+
+      <div id="notification-pdt" class="tb" hidden>
+        <div class="title">THÔNG BÁO GIÁO VỤ</div>
+        <div class="row" style="padding-left:1vw;">
+          <div class="col-2">
+            <div class="list-group" id="list-tab" role="tablist" style="font-weight: bolder;">
+              <a class="list-group-item list-group-item-action active" data-toggle="list" href="#gtpdt" role="tab" >GIỚI THIỆU</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#quyche" role="tab" style="background-color: #ffacac;">QUY CHẾ HỌC VỤ</a>
+              <a class="list-group-item list-group-item-action"  data-toggle="list" href="#bomon" role="tab">BỘ MÔN</a>
+              <a class="list-group-item list-group-item-action"  data-toggle="list" href="#hocvu" role="tab" >HỌC VỤ</a>
+              <a class="list-group-item list-group-item-action"  data-toggle="list" href="#lichthi" role="tab">LỊCH THI</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#dkmh" role="tab">ĐĂNG KÝ MÔN HỌC</a>
+              
+            </div>
+          </div>
+          <div class="col-10">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="gtpdt" role="tabpanel">
+                <p style="width: 90%; padding-left:1vw; font-size: 1.5vw; text-indent: 2vw;">
+                  <b><i>Thông báo giáo vụ cung cấp cho các bạn các thông tin về:</i></b>
+                </p>
+                <ul style="width: 90%; padding-left:5vw; font-size: 1.5vw; text-indent: 2vw;">
+                  <li>
+                    <b>Quy chế học vụ:</b> Thông tin về quy chế hiện hành của trường Đại Học Bách
+                    Khoa TPHCM.
+                  </li>
+                  <li>
+                     <b>Bộ môn:</b> Các thông báo về việc thực hiện Đồ Án, Đề Cương Luận Văn và
+                      Luận văn tốt nghiệp,... của bộ môn Viễn Thông.
+                  </li>
+                  <li>
+                      <b>Học vụ:</b> Các thông báo về lịch học vụ, đăng ký môn học, thông tin 
+                      học phí, thông tin tốt nghiệp, ... từ Phòng Đào Tạo.
+                  </li>
+                  <li>
+                     <b>Lịch thi:</b> Các thông báo về lịch thi các học kỳ từ Phòng Đào Tạo.
+                  </li>
+                  <li>
+                     <b>Đăng ký môn học:</b> Thông báo về các môn học hủy lớp và lịch đăng ký 
+                     thi ngoại ngữ trong kỳ từ Phòng Đào Tạo.
+                  </li>
+                </ul>
+                
+              </div>
+              
+              
+              
+              
+              
+              <div class="tab-pane fade show" id="hocvu" role="tabpanel">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="list-group titlepdthv" id="list-tab" role="tablist">
+                            
+                          </div>
+                        </div>
+                        <div class="col-8">
+                          <div class="tab-content contentpdthv" id="nav-tabContent">
+                            
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="tab-pane fade" id="lichthi" role="tabpanel" aria-labelledby="list-profile-list">
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="list-group titlepdtlt" id="list-tab" role="tablist">
+                          
+                        </div>
+                      </div>
+                      <div class="col-8">
+                        <div class="tab-content contentpdtlt" id="nav-tabContent">
+                          
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              <div class="tab-pane fade" id="dkmh" role="tabpanel">
+
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="list-group titlepdtdkmh" id="list-tab" role="tablist">
+                          
+                        </div>
+                      </div>
+                      <div class="col-8">
+                        <div class="tab-content contentpdtdkmh" id="nav-tabContent">
+                          
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              <div class="tab-pane fade" id="bomon" role="tabpanel">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="list-group titlebm" id="list-tab" role="tablist">
+                            
+                          </div>
+                        </div>
+                        <div class="col-8">
+                          <div class="tab-content contentbm" id="nav-tabContent">
+                            
+                          </div>
+                        </div>
+                      </div>
+
+              </div>
+
+              <div class="tab-pane fade" id="quyche" role="tabpanel" style="width: 90%;">
+                <p style="font-size:1.5vw; color:red; font-weight:bolder; padding-left: 1vw; text-align:center;">
+                  QUY CHẾ ĐÀO TẠO VÀ HỌC VỤ BẬC ĐẠI HỌC, CAO ĐẲNG  
+                </p>;
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <script>
+            $.get("/getpdt?code=HV").done(function(id){
+              var data = JSON.parse(id).data;
+              var title_links = JSON.parse(id).titles;
+              for (i=0;i<title_links.length;i++){
+                var html = '<a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#listhv' + i + '" role="tab" aria-controls="home">'+title_links[i]+'</a>';
+                $('.titlepdthv').append(html);
+                var html = '<div class="tab-pane fade contentdatahv'+i+'" id="listhv'+i+'" role="tabpanel" aria-labelledby="list-profile-list"></div>';
+                $('.contentpdthv').append(html);
+                var data_html = '<p style="font-size:1.5vw; color:red; font-weight:bolder; padding-left: 1vw; text-align:center;">' + title_links[i] + '</p>';
+                $('.contentdatahv'+i).append(data_html);
+                var data_html = data[i];
+                $('.contentdatahv'+i).append(data_html);
+              }
+            });
+        
+
+        
+            $.get("/getpdt?code=LT").done(function(id){
+              var data = JSON.parse(id).data;
+              var title_links = JSON.parse(id).titles;
+              for (i=0;i<title_links.length;i++){
+                var html = '<a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#listlt' + i + '" role="tab" aria-controls="home">'+title_links[i]+'</a>';
+                $('.titlepdtlt').append(html);
+                var html = '<div class="tab-pane fade contentdatalt'+i+'" id="listlt'+i+'" role="tabpanel" aria-labelledby="list-profile-list"></div>';
+                $('.contentpdtlt').append(html);
+                var data_html = '<p style="font-size:1.5vw; color:red; font-weight:bolder; padding-left: 1vw; text-align:center;">' + title_links[i] + '</p>';
+                $('.contentdatalt'+i).append(data_html);
+                var data_html = data[i];
+                $('.contentdatalt'+i).append(data_html);
+              }
+            });
+
+
+            $.get("/getpdt?code=DK").done(function(id){
+              var data = JSON.parse(id).data;
+              var title_links = JSON.parse(id).titles;
+              for (i=0;i<title_links.length;i++){
+                var html = '<a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#listav' + i + '" role="tab" aria-controls="home">'+title_links[i]+'</a>';
+                $('.titlepdtdkmh').append(html);
+                var html = '<div class="tab-pane fade contentdatadkmh'+i+'" id="listav'+i+'" role="tabpanel" aria-labelledby="list-profile-list"></div>';
+                $('.contentpdtdkmh').append(html);
+                var data_html = '<p style="font-size:1.5vw; color:red; font-weight:bolder; padding-left: 1vw; text-align:center;">' + title_links[i] + '</p>';
+                $('.contentdatadkmh'+i).append(data_html);
+                var data_html = data[i];
+                $('.contentdatadkmh'+i).append(data_html);
+              }
+            });
+
+
+            $.get("/getbomon").done(function(id){
+              var data = JSON.parse(id).data;
+              var title_links = JSON.parse(id).titles;
+              for (i=0;i<title_links.length;i++){
+                var html = '<a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#listbm' + i + '" role="tab" aria-controls="home">'+title_links[i]+'</a>';
+                $('.titlebm').append(html);
+                var html = '<div class="tab-pane fade contentdatabm'+i+'" id="listbm'+i+'" role="tabpanel" aria-labelledby="list-profile-list"></div>';
+                $('.contentbm').append(html);
+                var data_html = '<p style="font-size:1.5vw; color:red; font-weight:bolder; padding-left: 1vw; text-align:center;">' + title_links[i] + '</p>';
+                $('.contentdatabm'+i).append(data_html);
+                var data_html = data[i];
+                for (j=0;j<data_html.length;j++){
+                  var html = data_html[j];
+                  $('.contentdatabm'+i).append(html);
+                }
+              }
+            });
+
+
+            $.get("/getquyche").done(function(id){
+              var data = JSON.parse(id).data;
+              $('#quyche').append(data);
+              $('li').click(function(e) {
+                  var state = $(this).children('div.answer').css("display");
+                  if (state == 'none'){
+                    $(this).children('div.answer').attr("style","display:enable;");
+                  }
+                  else {
+                    $(this).children('div.answer').attr("style","display:none;");
+                  }
+              });
+            });
+
+
+
+      </script>
+
+      
+
+    <div id="notification-ctdt" class="dt" style="padding-left:1vw;" hidden>
+      <div class="title">CHƯƠNG TRÌNH ĐÀO TẠO</div>
+      <div class="row">
+        <div class="col-2">
+          <div class="list-group" id="list-tab" role="tablist" style="font-weight: bolder;">
+            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#introctdt">GIỚI THIỆU</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#khoa2014">TỪ 2014 - 2018</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#khoa2019">TỪ 2019 VỀ SAU</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#montd">MÔN TƯƠNG ĐƯƠNG</a>
+          </div>
+        </div>
+        <div class="col-10">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="introctdt" role="tabpanel">
+              <p style="width: 90%; padding-left:1vw; font-size: 1.5vw; text-indent: 2vw;">
+                <b><i>Chương trình đào tạo cung cấp cho các bạn các thông tin về:</i></b>
+              </p>
+              <ul style="width: 90%; padding-left:5vw; font-size: 1.5vw; text-indent: 2vw;">
+                <li>
+                   Chương trình đào tạo từ khóa 2014 đến khóa 2018.
+                </li>
+                <li>
+                   Chương trình đào tạo từ khóa 2019 đến nay.
+                </li>
+                <li>
+                  Bảng quy đổi các môn tương đương giữa các chương trình đào tạo
+               </li>
+              </ul>
+              <p style="width: 90%; padding-left:1vw; font-size: 1.5vw; text-indent: 2vw;">
+                <b>Thông tin chi tiết về các ràng buộc, số tiết và tỉ trọng điểm môn học</b>
+                các bạn có thể hỏi chatbot hoặc tham khảo 
+                <a href = "http://www.aao.hcmut.edu.vn/index.php?route=catalog/chuongtrinhdaotao"
+                  target="_blank">
+                  tại đây
+                </a> (<i>chọn mục Cấu trúc môn học</i>)
+              </p>
+            </div>
+
+
+
+            <div class="tab-pane fade show" id="khoa2014" role="tabpanel">
+              <div class="row">
+                <div class="col-2">
+                  <div class="list-group" id="list-tab" role="tablist" style="font-weight:bolder;">
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#K2015" >Khóa 2015</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#K2016" >Khóa 2016</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#K2017" >Khóa 2017</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#K2018" >Khóa 2018</a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show add2" id="K2015" role="tabpanel">
+                      <iframe src="http://www.aao.hcmut.edu.vn/catalog/view/theme/default/ctdt_upload/2015/DD/2015_DD_DTT.pdf" height="500" width="800"></iframe>
+                    </div>
+
+                    <div class="tab-pane fade show add2" id="K2016" role="tabpanel">
+                      <iframe src="http://www.aao.hcmut.edu.vn/catalog/view/theme/default/ctdt_upload/2016/DD/2016_DD_DTT.pdf" height="500" width="800"></iframe>
+                    </div>
+
+                    <div class="tab-pane fade show add2" id="K2017" role="tabpanel">
+                      <iframe src="http://www.aao.hcmut.edu.vn/catalog/view/theme/default/ctdt_upload/2017/DD/2017_DD_DTT.pdf" height="500" width="800"></iframe>
+                    </div>
+
+                    <div class="tab-pane fade show add2" id="K2018" role="tabpanel">
+                      <iframe src="http://www.aao.hcmut.edu.vn/catalog/view/theme/default/ctdt_upload/2018/DD/2018_DD_DVT.pdf" height="500" width="800"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="khoa2019" role="tabpanel" aria-labelledby="list-profile-list">
+              <div class="row">
+                <div class="col-2">
+                  <div class="list-group" id="list-tab" role="tablist" style="font-weight:bolder;">
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#K2019" >Khóa 2019</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#K2020" >Khóa 2020</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#K2021" >Khóa 2021</a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show" id="K2019" role="tabpanel">
+                      <iframe src="http://www.aao.hcmut.edu.vn/catalog/view/theme/default/ctdt_upload/khgd/2019_DD_DVT.pdf" height="500" width="800"></iframe>
+                    </div>
+
+                    <div class="tab-pane fade show" id="K2020" role="tabpanel" >
+                      <iframe src="http://www.aao.hcmut.edu.vn/catalog/view/theme/default/ctdt_upload/khgd/2020_DD_DVT.pdf" height="500" width="800"></iframe>
+                    </div>
+
+                    <div class="tab-pane fade show" id="K2021" role="tabpanel">
+                      <p><b>HIỆN TẠI HỆ THỐNG CHƯA CẬP NHẬT CHƯƠNG TRÌNH ĐÀO TẠO KHÓA 2021</b></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="montd" role="tabpanel" aria-labelledby="list-profile-list">
+
+            </div>
+      
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="notification-dcmh" class="vb" style="padding-left:1vw;" hidden>
+      <div class="title">VĂN BẢN VÀ BIỂU MẪU</div>
+      <div class="row">
+        <div class="col-2">
+          <div class="list-group" id="list-tab" role="tablist" style="font-weight: bolder;">
+            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#introvb" role="tab">GIỚI THIỆU</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#dcmh" role="tab">ĐỀ CƯƠNG MÔN HỌC</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#bieumaupdt" role="tab">BIỂU MẪU</a>
+          </div>
+        </div>
+        <div class="col-10">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="introvb" role="tabpanel">
+              <p style="width: 90%; padding-left:1vw; font-size: 1.5vw; text-indent: 2vw;">
+                <b><i>Văn bản và biểu mẫu cung cấp cho các bạn các thông tin về:</i></b>
+              </p>
+              <ul style="width: 90%; padding-left:5vw; font-size: 1.5vw; text-indent: 2vw;">
+                <li>
+                   Đề cương chi tiết các môn học thuộc bộ môn viễn thông.
+                </li>
+                <li>
+                   Các biểu mẫu, đơn từ phục vụ các thủ tục học vụ cho sinh viên
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="dcmh" role="tabpanel">
+              <table class="table table-striped" style="width: 80%;">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">MSMH</th>
+                    <th scope="col">TÊN MÔN</th>
+                    <th scope="col">SỐ CHỈ</th>
+                    <th scope="col">ĐỀ CƯƠNG</th>
+                  </tr>
+                </thead>
+                <tbody class = "tabledcmh">
+                 
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane fade bieumau" id="bieumaupdt" role="tabpanel" style="width: 90%;">
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $.get("/getdcmh").done(function(id){
+              var data = JSON.parse(id).data;
+              for (i=0;i<data.length;i++){
+                var idsub = data[i].id;
+                var name = data[i].name;
+                var credit = data[i].credit;
+                var html = '<tr><th scope="row">'+i+'</th><td>'+idsub+'</td><td>'+name+'</td><td>'+credit+'</td><td class="decuong'+i+'"></td></tr>';
+                $('.tabledcmh').append(html);
+                var html = '<a href="/return-files/'+idsub+'.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>'
+                $('.decuong'+i).append(html);
+              }
+      });
+
+
+      $.get("/getbieumau").done(function(id){
+              var data = JSON.parse(id).data;
+              var html = '<p style="font-size:1.5vw; color:red; font-weight:bolder; padding-left: 1vw; text-align:center;"> BIỂU MẪU PHÒNG ĐÀO TẠO </p>';
+              $('.bieumau').append(html);
+              $('.bieumau').append(data);
+      });
+    </script>
+
+
+
+    <div id="contact" class="lh" style="padding:1vw 1vw;" hidden>
+      <form action="" method="post" id='formmail'>
+        <div class="form-group">
+          <label style="font-weight: bolder; color: #bd0000;">STUDENT NAME</label><br>
+          <span style="font-size: 12pt; font-weight: bolder; margin-right: 1vw;">{{name}} - {{mssv}}</span> 
+          <input name="fromid" value="{{mssv}}" hidden>
+        </div>
+
+        <div class="form-group">
+          <label style="font-weight: bolder; color: #bd0000;">TEACHER NAME</label> <br>
+            <select class="form-select form-select-lg mb-3" id="teachername" name="toid" style="width: 80%; height:3vw;">
+               
+            </select>
+        </div>
+
+        <div class="form-group">
+          <label style="font-weight: bolder; color: #bd0000;">SUBJECT</label> <br>
+            <input class="form-select form-select-lg mb-3" name="subject" style="width: 80%; height:3vw;" type="text">
+        </div>
+
+
+        <div class="form-group">
+          <label class="contentmail" style="font-weight: bolder; color: #bd0000;">CONTENT</label>
+          <textarea class="form-control" name="contentmail" rows="4" id="content"></textarea>
+        </div>
+        <input class="btn btn-primary" id = "submit-mail" type="button" value="SUBMIT">
+        <input class="btn btn-primary" type="button"  id = "showmailbox"value="MAIL BOX">
+      </form>
+    </div>
+
+    <div id="mailbox" style="width:90%; text-align:center; margin:auto;" hidden>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">TEACHER NAME</th>
+            <th scope="col">SUBJECT</th>
+            <th scope="col">DETAIL</th>
+          </tr>
+        </thead>
+        <tbody id='contentmail'>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      $.get("/getmail").done(function(id){
+          var data = JSON.parse(id).data;
+          for (i=0;i<data.length;i++){
+            var name = data[i].name;
+            var ID = data[i].id;
+            var html = '<option value="'+ID+'">'+name+'</option>';
+            $('#teachername').append(html);
+          }
+      });
+      
+      $(function(){
+          $("#submit-mail").click(function(){
+          $.ajax({
+            url: "/sendmail",
+            data: $('#formmail').serialize(),
+            type: 'POST',
+            dataType: 'text',
+            success: function(response) {
+              alert(response);
+            }
+          });
+        });
+      });
+
+      $("#showmailbox").click(function(){
+        $.get("/showmail?mssv={{mssv}}").done(function(data){
+          $('#formmail').attr('hidden',true);
+          var data = JSON.parse(data).data;
+          for (i=0;i<data.length;i++){
+              var html = '<tr class="tr'+data[i].id+'"><th scope="row">'+data[i].id+'</th><td>'+data[i].idteacher+'</td><td>'
+                    +data[i].subject+'</td><td><p'+'id="mailid'+data[i].id +'">Đang xử lý</p></td></tr>';
+              $("#contentmail").append(html);
+              if (i == data.length-1){
+                $(".tr"+data[i].id).css("background-color","#d5f4e6");
+              }
+          }
+          $("#mailbox").attr('hidden',false);
+        });
+      });
+       
+    </script>
+
+
+
+    <div id="footer">
+      <div style="width:40%; display: inline-block;">
+        <p style="font-size: 1.2vw; font-weight: bolder; color: snow; padding: .5vw .5vw .5vw .5vw; width: 100%;">
+          <span style="color: tomato; font-weight: bolder;">Văn phòng:</span>
+          113B3 – 268 Lý Thường Kiệt, Q. 10, TP.HCM
+        </p>
+
+        <p style="font-size: 1.2vw; font-weight: bolder; color: snow; padding: .5vw .5vw .5vw .5vw; width: 100%;">
+          <span style="color: tomato; font-weight: bolder;">Điện thoại:</span>
+          (84.8) 38647257 – Ext: 5707
+        </p>
+
+        <p style="font-size: 1.2vw; font-weight: bolder; color:lightcoral; padding: .5vw .5vw .5vw .5vw; width: 100%;">
+          © 2021 - LVTN 2021 - Bộ môn Viễn Thông
+        </p>
+      </div>
+      <div style="width:30%; display: inline-block; text-align: center;">
+        <p style="font-size: 1.5vw; font-weight: bolder; color:rgb(255, 161, 161); padding: .5vw .5vw .5vw .5vw; width: 100%;">
+          LIÊN HỆ VỚI CHÚNG TÔI
+        </p>
+        
+        <a href="https://www.facebook.com/hcmbktel/" target="_blank">
+          <button type="button" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2vw" height="2vw" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+            </svg>
+          </button>
+        </a>
+
+        <a href="mailto:bmvt@hcmut.edu.vn">
+          <button type="button" class="btn btn-danger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2vw" height="2vw" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"></path>
+            </svg>
+          </button>
+        </a>
+        
+
+
+
+
+      </div>
+    </div>
+
+    
+  
+
+ 
+
+    
+
+
+
+  </body>
+
+  
+</html>

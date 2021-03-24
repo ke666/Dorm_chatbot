@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Đăng nhập hệ thống</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="static/login.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                HỆ THỐNG HỖ TRỢ HỌC TẬP SINH VIÊN ĐIỆN TỬ - VIỄN THÔNG
+            </div>
+        </header>
+        <main>
+            {% if sucess%}
+            <div class="noticesucess">
+                <span onclick="this.parentElement.style.display='none';">&times;</span>
+                {{sucess}}
+            </div>
+           {% endif %}
+           {% if fail%}
+            <div class="noticefail">
+                <span onclick="this.parentElement.style.display='none';">&times;</span>
+                {{fail}}
+            </div>
+           {% endif %}
+            <div class="container">
+            <div class="login-form">
+                <form action="bot" method="post">
+                    <h1>ĐĂNG NHẬP HỆ THỐNG</h1>
+                    <div class="input-box">
+                        <input type="text" name="username" id="username" placeholder="Nhập tên đăng nhập">
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password" id="password" placeholder="Nhập mật khẩu">
+                    </div>
+                    <button type="submit" value="submit"> Đăng nhập </button>
+                    <!---a href="register"><button type="button">Đăng ký</button></a--->
+                </form>
+            </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+               Thesis Proposal 192
+            </div>
+        </footer>
+    </body>
+</html>

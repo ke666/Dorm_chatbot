@@ -1,0 +1,15 @@
+{"greet":[
+{"tag": "greeting",
+    "patterns": ["xin chào", "hello", "hi","hey","good morning", "good afternoon", "good day"],
+    "responses": [""]
+   },
+   {"tag": "goodbye",
+    "patterns": ["bye", "see you later","tạm biệt","bái bai","hẹn gặp lại"],
+    "responses": ["Tạm biệt bạn, hẹn gặp lại lần sau !"]
+   },
+   {"tag": "thanks",
+    "patterns": ["thanks", "thank you", "cám ơn","ok"],
+    "responses": ["Nếu có gì thắc mắc, bạn cứ tìm đến Chatbot nhé ! Tớ luôn sẵn sàng phục vụ cậu !"]
+   }
+]
+}

@@ -1,0 +1,59 @@
+{"student_standard":[
+    {"tag": "CAV1",
+    "patterns": ["anh năm 1", "văn năm 1", "anh năm nhất", "tiếng anh năm 1", "tiếng anh năm nhất"],
+    "responses": [""]
+    },
+    {"tag": "CAV2",
+    "patterns": ["anh năm 2", "văn năm 2", "anh năm hai", "tiếng anh năm 2", "tiếng anh năm hai"],
+    "responses": [""]
+    },
+    {"tag": "CAV3",
+    "patterns": ["anh năm 3", "văn năm 3", "anh năm ba", "tiếng anh năm 3", "tiếng anh năm ba"],
+    "responses": [""]
+    },
+    {"tag": "CAVLV",
+    "patterns": ["anh luận văn", "tiếng anh luận","chuẩn anh luận","nhận luận văn"],
+    "responses": [""]
+    },
+    {"tag": "CAVTN",
+    "patterns": ["anh tốt nghiệp", "chuẩn anh nghiệp","anh văn ra trường","tiếng anh ra trường"],
+    "responses": [""]
+    },
+    {"tag": "17",
+    "patterns":["2017","K2017","K17","khóa 2017"],
+    "responses":[""]
+    },
+    {"tag": "18",
+    "patterns":["2018","K2018","K18","khóa 2018"],
+    "responses": [""]
+    },
+    {"tag": "19",
+    "patterns":["2019","K2019","K19","khóa 2019"],
+    "responses": [""]
+    },
+    {"tag": "CSV1",
+    "patterns": ["sinh viên năm nhất","sinh năm một","chuẩn viên năm 1","sinh viên năm 1"],
+    "responses": [""]
+    },
+    {"tag": "CSV2",
+    "patterns": ["sinh viên năm hai","sinh năm hai","chuẩn viên năm 2","sinh viên năm 2"],
+    "responses": [""]
+    },
+    {"tag": "CSV3",
+    "patterns": ["sinh viên năm ba","sinh năm ba","chuẩn viên năm 3","sinh viên năm 3"],
+    "responses": [""]
+    },
+    {"tag": "CSV4",
+    "patterns": ["sinh viên năm tư","sinh năm tư","chuẩn viên năm 4","sinh viên năm 4"],
+    "responses": [""]
+    },
+    {"tag": "CSV5",
+    "patterns": ["sinh viên năm 5","sinh năm 5","chuẩn viên năm năm","sinh viên năm 5"],
+    "responses": [""]
+    },
+    {"tag": "TOEIC",
+    "patterns": ["chuyển điểm","quy đổi"],
+    "responses": [""]
+    }
+  ]
+}

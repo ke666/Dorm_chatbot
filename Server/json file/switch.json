@@ -1,0 +1,23 @@
+{"switch":[
+{"tag": "greet",
+    "patterns": ["chào","hello","hi","bye","tạm biệt","cám ơn","thanks","see you later"],
+    "responses": []
+   },
+   {"tag": "email_teacher",
+    "patterns": ["liên hệ","email","thầy","cô","tiếp sinh viên","giảng viên"],
+    "responses": []
+   },
+   {"tag": "subject_dee",
+    "patterns": ["học trước","song hành","tiên quyết","HT","SH","TQ","tín chỉ","đăng ký","đủ điều kiện"],
+    "responses": []
+   },
+   {"tag": "student_stand",
+    "patterns": ["chuẩn","sinh viên","tiếng anh","anh văn","năm","khóa","toeic","chuyển điểm"],
+    "responses": []
+   },
+   {"tag": "google_map",
+    "patterns": ["đường đi","tòa","vị trí","khu vực","đến chỗ","văn phòng khoa"],
+    "responses": []
+   }
+]
+}

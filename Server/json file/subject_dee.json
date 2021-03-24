@@ -1,0 +1,280 @@
+{"subject_dee": [
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Xin lỗi, Chatbot chưa hiểu yêu cầu của bạn ! Bạn vui lòng gửi lại câu hỏi nhé !"],
+         "context": [""]
+        },
+        { "tag":"EE1001",
+        "patterns":["nhập môn","nhập kỹ","EE1001","nhập thuật"],
+        "responses":[""]
+        },
+        {"tag": "EE1003",
+        "patterns": ["toán kỹ","tkt","EE1003","toán thuật"],
+        "responses":[""]
+        },
+        {"tag": "EE1011 EE2033",
+        "patterns": ["giải mạch","gtm","EE1011","tích mạch","EE2033"],
+        "responses":[""]
+        },
+        {"tag": "EE1013 EE1007",
+        "patterns": ["vật bán","vlbd","EE1013","lý dẫn"],
+        "responses":[""]
+        },
+        {"tag": "EE1015 EE1009",
+        "patterns": ["kỹ thuật số","kts","EE1015","thuật số"],
+        "responses":[""]
+        },
+        {"tag": "EE2003",
+        "patterns": ["trường từ","tđt","EE2003","điện từ"],
+        "responses":[""]
+        },
+        {"tag": "EE2005",
+        "patterns": ["tín hệ","thht","EE2005","hiệu thống"],
+        "responses":[""]
+        },
+        {"tag": "EE2007 EE2035",
+        "patterns": ["mạch điện","mđt","EE2007","mạch tử"],
+        "responses":[""]
+        },
+        {"tag": "EE2009",
+        "patterns": ["lập trình","htmtvnnlt","EE2009","thống máy"],
+        "responses":[""]
+        },
+        {"tag": "EE2013 EE2039",
+        "patterns": ["vi xử","vxl","EE2013","vi lý"],
+        "responses":[""]
+        },
+        {"tag": "EE2015",
+        "patterns": ["xử tín","xlsth","EE2015","lý hiệu"],
+        "responses":[""]
+        },
+        {"tag": "EE2017",
+        "patterns": ["cơ kỹ","csktđ","EE2017","thuật điện"],
+        "responses":[""]
+        },
+        {"tag": "EE2019",
+        "patterns": ["điều khiển","sở động","csđktđ","EE2019"],
+        "responses":[""]
+        },
+        {"tag": "EE2021",
+        "patterns": ["sở tử","cơ công","csđtcs","EE2021","cơ suất"],
+        "responses":[""]
+        },
+        {"tag": "EE2023",
+        "patterns": ["thực tử 1","ttđt1","EE2023","tập tử 1"],
+        "responses":[""]
+        },
+        {"tag": "EE2025",
+        "patterns": ["thực điện 1","ttđ1","EE2025","điện 1"],
+        "responses":[""]
+        },
+        {"tag": "EE3003",
+        "patterns": ["thiết hệ", "kế nhúng","tkhtn","EE3003"],
+        "responses":[""]
+        },
+        {"tag": "EE3011",
+        "patterns": ["tử thông","mđttt","EE3011","điện tin"],
+        "responses":[""]
+        },
+        {"tag": "EE3015",
+        "patterns": ["kỹ hệ","thống thông","kthtvt","EE3015"],
+        "responses":[""]
+        },
+        {"tag": "EE3019",
+        "patterns": ["truyền số","liệu mạng","tslvm","EE3019"],
+        "responses":[""]
+        },
+        {"tag": "EE3021",
+        "patterns": ["thực tử 2","tập tử 2","ttđt2","EE3021"],
+        "responses":[""]
+        },
+        {"tag": "EE3023",
+        "patterns": ["thực điện 2","ttđ2","EE3023","điện 2"],
+        "responses":[""]
+        },
+        {"tag": "EE3025",
+        "patterns": ["kỹ siêu","cao tần","sct","EE3025"],
+        "responses":[""]
+        },
+        {"tag": "EE3031",
+        "patterns": ["lập nhúng","trình nhúng","lthtn","EE3031"],
+        "responses":[""]
+        },
+        {"tag": "EE3033",
+        "patterns": ["tin quang","nlttq","EE3033","thông quang"],
+        "responses":[""]
+        },
+        {"tag": "EE3035",
+        "patterns": ["lý ảnh","xla","EE3035","xử ảnh"],
+        "responses":[""]
+        },
+        {"tag": "EE3037",
+        "patterns": ["tử y","đtys","EE3037","y sinh"],
+        "responses":[""]
+        },
+        {"tag": "EE3041",
+        "patterns": ["EE3039","xlsthvfpga","FPGA","xử lý số tín hiệu với FPGA"],
+        "responses":[""]
+        },
+        {"tag": "EE3043",
+        "patterns": ["cấu máy","trúc tính","ctmt","EE3043"],
+        "responses":[""]
+        },
+        {"tag": "EE3053",
+        "patterns": ["cảm biến","không dây","EE3053","mcbkd"],
+        "responses":[""]
+        },
+        {"tag": "EE3083",
+        "patterns": ["nâng cao","thuật nâng cao","EE3083","ktsnc","số nâng cao"],
+        "responses":[""]
+        },
+        {"tag": "EE3085",
+        "patterns": ["mạng viễn","EE3085","mạng thông","mvt"],
+        "responses":[""]
+        },
+        {"tag": "EE3105",
+        "patterns": ["kỹ xung","EE3105","ktx","thuật xung"],
+        "responses":[""]
+        },
+        {"tag": "EE3107",
+        "patterns": ["di động","EE3107","tttd","tin động"],
+        "responses":[""]
+        },
+        {"tag": "EE3111",
+        "patterns": ["mạng máy","EE3111","mạng tính","mmt"],
+        "responses":[""]
+        },
+        {"tag": "EE3113",
+        "patterns": ["sản xuất","quy trình thiết kế","EE3113","qtsxvtkvm"],
+        "responses":[""]
+        },
+        {"tag": "EE3115",
+        "patterns": ["tin số","nltts","EE3115","thông số"],
+        "responses":[""]
+        },
+        {"tag": "EE3117",
+        "patterns": ["mạch số","vi số","EE3117","tkvms"],
+        "responses":[""]
+        },
+        {"tag": "EE3121",
+        "patterns": ["tương tự","hỗn hợp"," mạch hỗn","EE3121","vi hợp"],
+        "responses":[""]
+        },
+        {"tag": "EE3125",
+        "patterns": ["quang điện","EE3125","quang tử","qdt"],
+        "responses":[""]
+        },
+        {"tag": "EE3127",
+        "patterns": ["ănten","vô tuyến","ănten và truyền sóng","EE3127"],
+        "responses":[""]
+        },
+        {"tag": "EE3129",
+        "patterns": ["tử ứng","điện dụng","EE3129","dtud"],
+        "responses":[""]
+        },
+        {"tag": "MT1003",
+        "patterns": ["giải 1","tích 1","MT1003","gt1"],
+        "responses":[""]
+        },
+        {"tag": "MT1005",
+        "patterns": ["giải 2","tích 2","MT1005","gt2"],
+        "responses":[""]
+        },
+        {"tag": "MT1007",
+        "patterns": ["đại tuyến","đại số","MT1007","dstt"],
+        "responses":[""]
+        },
+        {"tag": "MT1009",
+        "patterns": ["phương tính","ppt","MT1009","pháp tính"],
+        "responses":[""]
+        },
+        {"tag": "MT2001",
+        "patterns": ["xác xuất","thống kê","xstk","MT2001"],
+        "responses":[""]
+        },
+        {"tag": "SP1003",
+        "patterns": ["Mác","Lênin","chủ nghĩa","SP1003","cnmln"],
+        "responses":[""]
+        },
+        {"tag": "SP1005",
+        "patterns": ["tư tưởng","Hồ Chí Minh","SP1005","tthcm"],
+        "responses":[""]
+        },
+        {"tag": "SP1007",
+        "patterns": ["pháp luật","luật","SP1007","pldc"],
+        "responses":[""]
+        },
+        {"tag": "SP1009",
+        "patterns": ["đảng cộng sản","đường lối","cách mạng","SP1009","dlcmdcsvn"],
+        "responses":[""]
+        },
+        {"tag": "EE3151 EE4367",
+        "patterns": ["đồ án","đồ nghiệp","án tốt","datn","EE3151"],
+        "responses":[""]
+        },
+        {"tag": "EE3183",
+        "patterns": ["án 1","đồ 1","da1","EE3183"],
+        "responses":[""]
+        },
+        {"tag": "EE4011",
+        "patterns": ["án 2","đồ 2","da2","EE4011"],
+        "responses":[""]
+        },
+        {"tag": "EE3333",
+        "patterns": ["tập tốt","thực nghiệp","EE3333","tttn"],
+        "responses":[""]
+        },
+        {"tag": "EE3335 EE3365",
+        "patterns": ["tập ngoài","thực trường","EE3365","EE3335","ttnt"],
+        "responses":[""]
+        },
+        {"tag": "EE4331 EE4335",
+        "patterns": ["đề cương","đề văn","luận cương","EE4331","EE4335","dclv"],
+        "responses":[""]
+        },
+        {"tag": "EE4333 EE4337",
+         "patterns": ["văn nghiệp","luận tốt","tốt nghiệp","lvtn","EE4333","EE4337"],
+        "responses":[""]
+        },
+        {"tag": "EE3165",
+        "patterns": ["thiết vi","tkvm","EE3165","kế mạch"],
+        "responses":[""]
+        },
+        {"tag": "EE3177",
+        "patterns": ["chuyên đề","cddtvt","EE3177","chuyên tử","đề thông"],
+        "responses":[""]
+        },
+        {"tag": "EE3165",
+        "patterns": ["thiết vi","tkvm","EE3165","kế mạch"],
+        "responses":[""]
+        },
+        {"tag": "EE3167",
+        "patterns": ["thiết kế IoT","tkvptudiot","EE3167","IoT"],
+        "responses":[""]
+        },
+        {"tag": "EE3169",
+        "patterns": ["máy học","mhcbvud","EE3169","cơ bản"],
+        "responses":[""]
+        },
+        {"tag": "HT",
+        "patterns": ["môn trước","ht","học trước"],
+        "responses":[""]
+        },
+        {"tag": "SH",
+        "patterns": ["song hành","sh","học song"],
+        "responses":[""]
+        },
+        {"tag": "TQ",
+        "patterns": ["tiên quyết","tq","học quyết"],
+        "responses":[""]
+        },
+        {"tag": "credict",
+        "patterns": ["tín chỉ","tc","số tín chỉ"],
+        "responses":[""]
+        },
+        {"tag": "can_register",
+        "patterns": ["đăng ký","kỳ sau","đủ điều kiện", "có thể đăng ký"],
+        "responses":[""]
+        }
+   ]
+}

@@ -1,0 +1,96 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+header{
+    background-color: #4e63da9a;
+    min-height: 50px;
+    padding: 15px;
+}
+main{
+    background-color: #dddddd;
+    min-height: 300px;
+    padding: 7.5px 15px;
+}
+footer{
+    background-color: #4e63da9a;
+    min-height: 50px;
+    padding: 15px;
+}
+.container{
+    width: 100%;
+    max-width: 1000px;
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(2, 0, 107);
+    margin-left: auto;
+    margin-right: auto;
+}
+.register-form{
+    width: 100%;
+    max-width: 800px;
+    max-height: 800px ;
+    margin: 20px auto;
+    background-color: rgb(193, 237, 255);
+    padding: 10px;
+    border: 5px groove rgb(255, 205, 252);
+    border-radius: 10px;
+}
+h1{
+    color: blueviolet;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0.5cm;
+    margin-bottom: 0.5cm;
+}
+
+label{
+    color: black;
+    font-size: 13pt;
+    text-align: left;
+    margin-top: 0.25cm;
+    margin-bottom: 0.25cm;
+}
+
+input{
+    padding: 7.5px 15px;
+    width: 60%;
+    height: 5%;
+    border: 2px solid #cccccc;
+    outline: blue;
+    align-items: center;
+}
+
+button{
+    padding: 7.5px 15px;
+    border-radius: 2px;
+    background-color: blue;
+    color: wheat;
+    border: none;
+    outline: none;
+}
+
+a:link, a:visited {
+    background-color: #00028f;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5cm;
+}
+
+.alert {
+    position: absolute;
+    padding: 5px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    font-size:13pt;
+    width: 10cm;
+    margin-left: 22cm;
+  }
+  

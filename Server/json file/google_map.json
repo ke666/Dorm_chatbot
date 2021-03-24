@@ -1,0 +1,83 @@
+{"google_map":[
+    {"tag": "B1",
+    "patterns": ["Điện - Điện Tử","RFICS","B1","khoa Điện"],
+    "responses": []
+    },
+    {"tag": "B2",
+    "patterns": ["Hóa Học","GDB2B","GDB2A","B2","Khoa Hóa"],
+    "responses": []
+    },
+    {"tag": "B3",
+    "patterns": ["Sau đại học", "Viễn Thông","Điện Tử","B3","Tự Động"],
+    "responses": []
+    },
+    {"tag": "B4",
+    "patterns": ["ứng dụng","B4","Khoa học ứng dụng","Cơ Kỹ thuật","Vật lý kỹ thuật"],
+    "responses": []
+    },
+    {"tag": "B6",
+    "patterns": ["xây dựng","B6","Kiến trúc","Trắc địa","Bản đồ"],
+    "responses": []
+    },
+    {"tag": "B8",
+    "patterns": ["địa chất","dầu khí","B8"],
+    "responses": []
+    },
+    {"tag": "B9",
+    "patterns": ["môi trường","tài nguyên","B9"],
+    "responses": []
+    },
+    {"tag": "B10",
+    "patterns": ["quản lý công nghiệp","qlcn","B10","tài chính","tiếp thị"],
+    "responses": []
+    },
+    {"tag": "B11",
+    "patterns": ["cơ khí","dệt may","B10","thiết kế máy","chế tạo máy","cơ giới hóa","cơ điện tử","nhiệt lạnh","hệ thống công nghiệp"],
+    "responses": []
+    },
+    {"tag": "A1",
+    "patterns": ["đào tạo chính quy","PĐT","A1"],
+    "responses": []
+    },
+    {"tag": "A2",
+    "patterns": ["thư viện","A2"],
+    "responses": []
+    },
+    {"tag": "A3",
+    "patterns": ["Máy tính","CSE","A3"],
+    "responses": []
+    },
+    {"tag": "A4",
+    "patterns": ["OISP","quốc tế","Công tác chính trị","CTCTSV","A4"],
+    "responses": []
+    },
+    {"tag": "A5",
+    "patterns": ["Hội trường A5","A5"],
+    "responses": []
+    },
+    {"tag": "C1",
+    "patterns": ["Bảo dưỡng công nghiệp","Xưởng cơ khí"],
+    "responses": []
+    },
+    {"tag": "C2",
+    "patterns": ["Thực tập điện tử","C2","Thực tập điện 2"],
+    "responses": []
+    },
+    {"tag": "C3",
+    "patterns": ["Xưởng Ô tô","C3"],
+    "responses": []
+    },
+    {"tag": "C4",
+    "patterns": ["công nghệ vật liệu","C4","kim loại","hợp kim","silicat","polyme"],
+    "responses": []
+    },
+    {"tag": "C5",
+    "patterns": ["Kỹ thuật giao thông","C5","hàng không","ô tô","tàu thủy"],
+    "responses": []
+    },
+    {"tag": "C6",
+    "patterns": ["Trung tâm ngoại ngữ","C6"],
+    "responses": []
+    }  
+]
+}
