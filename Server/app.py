@@ -178,7 +178,7 @@ def showmail():
     return json.dumps({"data":data},ensure_ascii=False)
 
 if __name__ == '__main__':
-    app.run(host='172.20.10.12', port=8000, debug=True)
+    app.run(host='127.0.0.1', port=8000, debug=True)
     
     #app.run(host='localhost', port=8000, debug=True)
-    #app.run(host='192.168.100.10', port=8000, debug=True)
+    #app.run(host='192.168.100.10', port=8000, debug=True) 172.20.10.12   127.0.0.1
