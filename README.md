@@ -8,8 +8,11 @@
 <p align="center"> <img src="img/ER.png" width=""> </p>
 <p align="center"> <img src="img/csdl.png" width=""> </p>
 <p align="center"> <img src="img/mysql.png" width=""> </p>
-<p align="center"> <img src="img/login.png" width=""> </p>
 <p align="center"> <img src="img/gd_app.png" width=""> </p>
+<p align="center"> <img src="img/login.png" width=""> </p>
+<p align="center"> <img src="img/stream Socket.png" width=""> </p>
+<p align="center"> <img src="img/chatbot.png" width=""> </p>
+
 <p align="center"> <img src="img/giaotiep.png" width=""> </p>
 <p align="center"> <img src="img/mapschool.png" width=""> </p>
 <p align="center"> <img src="img/with rasp.png" width=""> </p>
